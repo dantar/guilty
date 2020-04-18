@@ -9,4 +9,6 @@ export class GuiltyCard {
 
 export class SuspectCard {
     suspect: string;
+    guilty: number;
+    accused: boolean;
 }

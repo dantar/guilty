@@ -20,12 +20,12 @@ export class SharedDataService {
 
   initGame() {
     this.deck = [];
-    this.game = {days: [], actions: 3, suspects: []};
+    this.game = {days: [], actions: 5, suspects: []};
     this.supects.forEach(s => {
       [1, 2, 3, 1, 2, 3].forEach(severity => {
         this.deck.push({suspect: s, severity: severity, revealed: false})
       });
-      this.game.suspects.push({suspect: s});
+      this.game.suspects.push({suspect: s, guilty: 0, accused: true});
     });
     this.games.shuffle(this.deck);
     this.aNewDay();
@@ -44,6 +44,30 @@ export class SharedDataService {
       card.cost = cost ++;
       day.push(card);
     });
+  }
+
+  endGame(suspect: string) {
+    while (this.game.days.length < 4) {
+      this.aNewDay();
+    }
+    this.game.days.forEach(d => {
+      d.forEach(c => {
+        c.revealed = true;
+      })
+    })
+    this.updateSuspects();
+  }
+
+  updateSuspects() {
+    this.game.suspects.forEach(s => {
+      s.guilty = 0;
+      this.game.days.forEach(d => {
+        d.filter(c => c.revealed && c.confirmed && (c.suspect === s.suspect))
+        .forEach(c => {
+          s.guilty += c.severity;
+        });
+      })
+    })
   }
 
 }

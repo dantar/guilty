@@ -74,6 +74,27 @@
     }
 }
 
+.suspect-dwarves {
+    text {
+        fill: red;
+    }
+}
+.suspect-ruler {
+    text {
+        fill: green;
+    }
+}
+.suspect-guild {
+    text {
+        fill: blue;
+    }
+}
+.suspect-elves {
+    text {
+        fill: yellow;
+    }
+}
+
 .card-revealed-true.card-confirmed-true {
     opacity: 1;
 }

@@ -1,6 +1,6 @@
 <svg viewBox="0 0 100 100" 
    class="game-card card-confirmed-{{card.confirmed}} card-suspect-{{card.suspect}} card-severity-{{card.severity}} card-revealed-{{card.revealed}}"
-   (click)="revealCard()">
+   (click)="acted.emit(card)">
   <rect
      ry="8.9108067"
      y="3.6317062"

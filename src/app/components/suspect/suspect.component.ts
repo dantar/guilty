@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { SuspectCard } from 'src/app/models/guilty-card.model';
 
 @Component({
   selector: 'app-suspect, [app-suspect]',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./suspect.component.scss']
 })
 export class SuspectComponent implements OnInit {
+
+  @Input() suspect: SuspectCard;
+  @Output() pointed = new EventEmitter<SuspectCard>();
 
   constructor() { }
 

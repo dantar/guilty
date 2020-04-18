@@ -17,9 +17,4 @@ export class CardComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  revealCard() {
-    this.card.revealed = true;
-    this.acted.emit(this.card);
-  }
-
 }
