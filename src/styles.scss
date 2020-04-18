@@ -25,6 +25,56 @@
 
 .game-card {
     width: 100%;
+    text {
+        font-style:normal;
+        font-variant:normal;
+        font-weight:normal;
+        font-stretch:normal;
+        font-size:85.90602112px;
+        line-height:1.25;
+        font-family:sans-serif;
+        font-variant-ligatures:normal;
+        font-variant-caps:normal;
+        font-variant-numeric:normal;
+        font-feature-settings:normal;
+        text-align:center;
+        letter-spacing:0px;
+        word-spacing:0px;
+        writing-mode:lr-tb;
+        text-anchor:middle;
+        fill: #567890;
+        fill-opacity:1;
+        stroke:none;
+        stroke-width:2.14765048
+    }
+}
+
+.card-suspect-dwarves {
+    text {
+        fill: red;
+    }
+}
+.card-suspect-ruler {
+    text {
+        fill: green;
+    }
+}
+.card-suspect-guild {
+    text {
+        fill: blue;
+    }
+}
+.card-suspect-elves {
+    text {
+        fill: yellow;
+    }
+}
+
+.card-confirmed-true {
+    opacity: 1;
+}
+.card-confirmed-false {
+    opacity: 0.3;
 }
 
 @media screen and (orientation:portrait) {
