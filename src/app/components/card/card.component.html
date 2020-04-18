@@ -1,4 +1,6 @@
-<svg viewBox="0 0 100 100" class="game-card card-confirmed-{{card.confirmed}} card-suspect-{{card.suspect}} card-severity-{{card.severity}} card-faceup-{{card.faceup}}">
+<svg viewBox="0 0 100 100" 
+   class="game-card card-confirmed-{{card.confirmed}} card-suspect-{{card.suspect}} card-severity-{{card.severity}} card-revealed-{{card.revealed}}"
+   (click)="revealCard()">
   <rect
      ry="8.9108067"
      y="3.6317062"
@@ -22,5 +24,35 @@
      height="92.736588"
      x="3.6317062"
      y="3.6317062"
-     ry="8.9108067" />    
+     ry="8.9108067" />
+
+   <g id="revealed" *ngIf="!card.revealed">
+      <circle
+         style="opacity:1;vector-effect:none;fill:#f2f2f2;fill-opacity:1;stroke:none;stroke-width:1.15453291;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
+         id="path825"
+         cx="79.5"
+         cy="79.5"
+         r="17.5" />
+      <path
+         d="m 77.177864,87.185719 h 3.174365 v 3.971866 h -3.174365 z m 3.080542,-2.298679 h -2.986719 v -2.408139 q 0,-1.579364 0.437844,-2.595787 0.437843,-1.016422 1.845198,-2.361228 l 1.407354,-1.391717 q 0.891324,-0.828775 1.282256,-1.563727 0.406569,-0.734951 0.406569,-1.501177 0,-1.391717 -1.03206,-2.251767 -1.016422,-0.86005 -2.705247,-0.86005 -1.235345,0 -2.642699,0.547304 -1.391717,0.547305 -2.908532,1.595002 v -2.939807 q 1.469903,-0.891324 2.971081,-1.329168 1.516815,-0.437843 3.127454,-0.437843 2.877258,0 4.612994,1.516815 1.751375,1.516815 1.751375,4.003141 0,1.188432 -0.562942,2.267404 -0.562942,1.063334 -1.970296,2.408139 l -1.37608,1.344806 q -0.734951,0.734951 -1.047697,1.157158 -0.297108,0.406569 -0.422206,0.7975 -0.09382,0.328383 -0.140735,0.797501 -0.04691,0.469118 -0.04691,1.282256 z"
+         style="stroke-width:0.80062819;fill:#333333"
+         id="path831" />
+      <circle
+         r="17.5"
+         cy="20.5"
+         cx="20.5"
+         id="circle839"
+         style="opacity:1;vector-effect:none;fill:#f2f2f2;fill-opacity:1;stroke:none;stroke-width:1.15453291;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.42269135px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.73556727;"
+         x="20.56465"
+         y="30.838276"
+         id="text852"><tspan
+            id="tspan850"
+            x="20.56465"
+            y="30.838276"
+            style="stroke-width:0.73556727;fill:#333333;fill-opacity:1;">{{card.cost}}</tspan></text>
+   </g>
+
 </svg>

@@ -70,10 +70,10 @@
     }
 }
 
-.card-confirmed-true {
+.card-revealed-true.card-confirmed-true {
     opacity: 1;
 }
-.card-confirmed-false {
+.card-revealed-true.card-confirmed-false {
     opacity: 0.3;
 }
 

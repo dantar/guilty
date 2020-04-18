@@ -22,21 +22,26 @@ export class SharedDataService {
     this.deck = [];
     [1, 2, 3, 1, 2, 3].forEach(severity => {
       this.supects.forEach(s => {
-        this.deck.push({suspect: s, severity: severity, faceup: false})
+        this.deck.push({suspect: s, severity: severity, revealed: false})
       });
     });
     this.games.shuffle(this.deck);
     this.game = {days: [], actions: 3};
-    [1,2,3,4].forEach(element => {
-      let confirms = [true, true, false];
-      this.games.shuffle(confirms);
-      let day: GuiltyCard[] = [];
-      this.game.days.push(day);
-      confirms.forEach(c => {
-        let card = this.deck.pop();
-        card.confirmed = c;
-        day.push(card);
-      });
+    this.aNewDay();
+    this.aNewDay();
+  }
+  
+  aNewDay() {
+    let day: GuiltyCard[] = [];
+    this.game.days.push(day);
+    let confirms = [true, true, false];
+    this.games.shuffle(confirms);
+    let cost = 1;
+    confirms.forEach(c => {
+      let card = this.deck.pop();
+      card.confirmed = c;
+      card.cost = cost ++;
+      day.push(card);
     });
   }
 

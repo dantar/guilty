@@ -1,6 +1,8 @@
 export class GuiltyCard {
     suspect: string;
     severity: number;
-    faceup: boolean;
+    revealed: boolean;
     confirmed?: boolean;
+    available?: boolean;
+    cost?: number;
 }
