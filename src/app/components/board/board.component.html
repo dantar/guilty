@@ -1,5 +1,7 @@
-<div>{{shared.game.actions}}</div>
 <div class="fullpage">
+    <div class="card-row">
+        <div app-suspect *ngFor="let suspect of shared.game.suspects" class="card-cell" ></div>
+    </div>
     <div class="card-row" *ngFor="let day of shared.game.days">
         <div app-card *ngFor="let card of day" class="card-cell" [card]="card" (acted)="actionOnDayCard(day, $event)"></div>
     </div>

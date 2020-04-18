@@ -20,13 +20,14 @@ export class SharedDataService {
 
   initGame() {
     this.deck = [];
-    [1, 2, 3, 1, 2, 3].forEach(severity => {
-      this.supects.forEach(s => {
+    this.game = {days: [], actions: 3, suspects: []};
+    this.supects.forEach(s => {
+      [1, 2, 3, 1, 2, 3].forEach(severity => {
         this.deck.push({suspect: s, severity: severity, revealed: false})
       });
+      this.game.suspects.push({suspect: s});
     });
     this.games.shuffle(this.deck);
-    this.game = {days: [], actions: 3};
     this.aNewDay();
     this.aNewDay();
   }

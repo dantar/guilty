@@ -6,3 +6,7 @@ export class GuiltyCard {
     available?: boolean;
     cost?: number;
 }
+
+export class SuspectCard {
+    suspect: string;
+}
