@@ -30,6 +30,7 @@ export class SharedDataService {
     this.games.shuffle(this.deck);
     this.aNewDay();
     this.aNewDay();
+    this.updateSuspects();
   }
   
   aNewDay() {
@@ -56,6 +57,10 @@ export class SharedDataService {
       })
     })
     this.updateSuspects();
+  }
+
+  oneMoreGame() {
+    this.initGame();
   }
 
   updateSuspects() {

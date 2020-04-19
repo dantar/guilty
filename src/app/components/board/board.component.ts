@@ -9,9 +9,12 @@ import { GuiltyCard, SuspectCard } from 'src/app/models/guilty-card.model';
 })
 export class BoardComponent implements OnInit {
 
+  showSuspects: boolean;
+
   constructor(public shared: SharedDataService) { }
 
   ngOnInit(): void {
+    this.showSuspects = false;
   }
 
   actionOnDayCard(day: GuiltyCard[], card: GuiltyCard) {
@@ -27,9 +30,16 @@ export class BoardComponent implements OnInit {
     this.shared.updateSuspects();
   }
 
-  pointedSuspect(suspect: SuspectCard) {
+  accusation(suspect: SuspectCard) {
     suspect.accused = true;
     this.shared.endGame(suspect.suspect);
   }
 
+  translateGroup(index: number): string {
+    return `translate(${index % 2 * 55} -${Math.floor(index/2) * 55} )`
+  }
+
+  toggleShowSuspects() {
+    this.showSuspects = ! this.showSuspects;
+  }
 }

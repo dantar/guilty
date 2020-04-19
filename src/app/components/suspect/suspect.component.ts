@@ -9,6 +9,7 @@ import { SuspectCard } from 'src/app/models/guilty-card.model';
 export class SuspectComponent implements OnInit {
 
   @Input() suspect: SuspectCard;
+  @Input() transform: string;
   @Output() pointed = new EventEmitter<SuspectCard>();
 
   constructor() { }

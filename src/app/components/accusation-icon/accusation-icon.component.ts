@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { SharedDataService } from 'src/app/services/shared-data.service';
 import { SuspectCard } from 'src/app/models/guilty-card.model';
 
@@ -8,6 +8,8 @@ import { SuspectCard } from 'src/app/models/guilty-card.model';
   styleUrls: ['./accusation-icon.component.scss']
 })
 export class AccusationIconComponent implements OnInit {
+
+  @Output() action = new EventEmitter();
 
   constructor(public shared: SharedDataService) { }
 

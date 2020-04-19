@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { SharedDataService } from 'src/app/services/shared-data.service';
 
 @Component({
@@ -7,6 +7,8 @@ import { SharedDataService } from 'src/app/services/shared-data.service';
   styleUrls: ['./game-icon.component.scss']
 })
 export class GameIconComponent implements OnInit {
+
+  @Output() acted = new EventEmitter();
 
   constructor(public shared: SharedDataService) { }
 
