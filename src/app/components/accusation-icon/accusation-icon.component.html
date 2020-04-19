@@ -1,0 +1,23 @@
+<svg viewBox="0 0 100 100" class="panel-menu-item game-icon">
+    <g *ngFor="let part of parts" [attr.transform]="part.transform" class="suspect-{{part.suspect.suspect}}">
+        <rect
+            ry="4.0098629"
+            y="56.63427"
+            x="1.6342683"
+            height="41.731464"
+            width="41.731464"
+            id="rect832"
+            style="opacity:1;vector-effect:none;fill:#333333;fill-opacity:1;stroke:#999999;stroke-width:3.26853657;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke" />
+        <text
+            id="text836"
+            y="91.571938"
+            x="22.584942"
+            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.65770721px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill-opacity:1;stroke:none;stroke-width:0.9664427"
+            xml:space="preserve"><tspan
+                style="stroke-width:0.9664427"
+                y="91.571938"
+                x="22.584942"
+                id="tspan834">{{part.suspect.guilty}}</tspan></text>
+    </g>
+
+</svg>

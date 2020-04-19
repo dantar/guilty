@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { BoardComponent } from './components/board/board.component';
 import { CardComponent } from './components/card/card.component';
 import { SuspectComponent } from './components/suspect/suspect.component';
+import { GameIconComponent } from './components/game-icon/game-icon.component';
+import { AccusationIconComponent } from './components/accusation-icon/accusation-icon.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BoardComponent,
     CardComponent,
-    SuspectComponent
+    SuspectComponent,
+    GameIconComponent,
+    AccusationIconComponent
   ],
   imports: [
     BrowserModule,
