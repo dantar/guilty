@@ -1,5 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 
+@font-face {
+    font-family: 'AR JULIAN';
+    src: url(/assets/ar-julian.ttf) format("truetype");
+    font-weight:300;
+}
+
+
 .fullpage {
     margin: 0;
     padding: 0;
@@ -93,6 +100,32 @@
     text {
         fill: yellow;
     }
+}
+
+.suspect-stroke-dwarves {
+    stroke: red;
+}
+.suspect-stroke-ruler {
+    stroke: green;
+}
+.suspect-stroke-guild {
+    stroke: blue;
+}
+.suspect-stroke-elves {
+    stroke: yellow;
+}
+
+.suspect-fill-dwarves {
+    fill: red;
+}
+.suspect-fill-ruler {
+    fill: green;
+}
+.suspect-fill-guild {
+    fill: blue;
+}
+.suspect-fill-elves {
+    fill: yellow;
 }
 
 .card-revealed-true.card-confirmed-true {
