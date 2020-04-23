@@ -2,10 +2,25 @@
 
 @font-face {
     font-family: 'AR JULIAN';
-    src: url(/assets/ar-julian.ttf) format("truetype");
+    src: url(assets/ar-julian.ttf) format("truetype");
     font-weight:300;
 }
 
+.bg {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    /* The image used */
+    background-image: url("assets/city.jpg");
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .fullpage {
     margin: 0;
