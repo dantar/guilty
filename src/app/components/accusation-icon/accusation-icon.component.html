@@ -1,5 +1,5 @@
 <svg viewBox="0 0 100 100" class="panel-menu-item game-icon" (click)="action.emit()">
-    <g *ngFor="let part of parts" [attr.transform]="part.transform" class="suspect-{{part.suspect.suspect}}">
+    <g *ngFor="let part of parts; let index=index" [attr.transform]="part.transform" class="suspect-{{part.suspect.suspect}}">
         <rect
             ry="4.0098629"
             y="56.63427"
@@ -17,7 +17,7 @@
                 style="stroke-width:0.9664427"
                 y="91.571938"
                 x="22.584942"
-                id="tspan834">{{part.suspect.guilty}}</tspan></text>
+                id="tspan834">{{shared.game.suspects[index].guilty}}</tspan></text>
     </g>
 
 </svg>
